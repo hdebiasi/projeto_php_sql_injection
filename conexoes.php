@@ -57,9 +57,12 @@ function login($conn)
         $username = $_POST['usuario'];
         $senha = $_POST['senha'];
 
-        $consulta = "SELECT * FROM usuario WHERE username = '$username' AND senha = '$senha'";
+        $consulta = 'SELECT * FROM usuario WHERE username=:usuario AND senha=:senha';
+        $stmt = $conn->prepare($consulta);
+        $stmt->bindParam(':usuario', $username);
+        $stmt->bindParam(':senha', $senha);
+        $stmt->execute();
 
-        $stmt = $conn->query($consulta);
         $usuario = $stmt->fetch();
 
         if (!$usuario) {
