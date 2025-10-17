@@ -112,8 +112,10 @@ $nome_pesquisa = $_GET['nome_pesquisa'] ?? '';  // Operador de coalescência nul
 
                 <?php
                 $filtro = "%{$nome_pesquisa}%";
-                $consulta = "SELECT * FROM aluno WHERE nome LIKE '%" . $nome_pesquisa . "%'";
-                $stmt = $conn->query($consulta);
+                $consulta = "SELECT * FROM aluno WHERE nome LIKE :nome_aluno";
+                $stmt = $conn->prepare($consulta);
+                $stmt->bindParam(':nome_aluno', $filtro);
+                $stmt->execute();
 
                 while ($aluno = $stmt->fetch()) {
                     ?>
