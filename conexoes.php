@@ -47,7 +47,7 @@ function verificarTabelaUsuario($conn)
                                 ) ENGINE=InnoDB;'
                 );
         $stmt = $conn->query('INSERT INTO usuario
-                    VALUES (null, "Herculano De Biasi", "herculano", "herculano.debiasi@gmail.com", "123456");');
+                    VALUES (null, "Herculano De Biasi", "herculano", "herculano.debiasi@gmail.com", sha1("123456"));');
     }
 }
 
@@ -55,7 +55,7 @@ function login($conn)
 {
     if (isset($_POST['logar']) and !empty($_POST['usuario']) and !empty($_POST['senha'])) {
         $username = $_POST['usuario'];
-        $senha = $_POST['senha'];
+        $senha = sha1($_POST['senha']);
 
         $consulta = 'SELECT * FROM usuario WHERE username=:usuario AND senha=:senha';
         $stmt = $conn->prepare($consulta);

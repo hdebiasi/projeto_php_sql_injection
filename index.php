@@ -8,10 +8,10 @@ if(isset($_POST['logar'])) {
     $mensagem = login($conn);
 
     echo '<div class="container"><div id="flash-msg" class="alert alert-danger fade show d-flex justify-content-center align-items-center">
-            <i class="bi-exclamation-octagon-fill"></i>
-            <span class="me-auto px-3"><strong class="mx-2">Erro! </strong>' . $mensagem . '</span>
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div></div>';
+                <i class="bi-exclamation-octagon-fill"></i>
+                <span class="me-auto px-3"><strong class="mx-2">Erro! </strong>' . $mensagem . '</span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+              </div></div>';
 }
 ?>
 
