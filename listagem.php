@@ -112,22 +112,24 @@ $nome_pesquisa = $_GET['nome_pesquisa'] ?? '';  // Operador de coalescência nul
 
                 <?php
                 $filtro = "%{$nome_pesquisa}%";
-                $consulta = "SELECT * FROM aluno WHERE nome LIKE :nome_aluno";
+                $consulta = "SELECT id_aluno, nome, nascimento, salario FROM aluno WHERE nome LIKE :nome_aluno";
                 $stmt = $conn->prepare($consulta);
                 $stmt->bindParam(':nome_aluno', $filtro);
                 $stmt->execute();
 
                 while ($aluno = $stmt->fetch()) {
-                    ?>
+                    $data_nascimento = date('d-m-Y', strtotime($aluno['nascimento']));
+                    $salario = number_format($aluno['salario'], 2, ',', '.');
+                ?>
 
-                    <tr>
-                        <td style="width: 10%;"><?php echo $aluno[0] ?></td>
-                        <td style="width: 30%;"><?= $aluno[1] ?></td>
-                        <td style="width: 20%;" class="text-center"><?= $aluno[2] ?></td>
-                        <td style="width: 15%;" class="text-end"><?= $aluno[3] ?></td>
-                    </tr>
+                <tr>
+                    <td style="width: 10%;"><?php echo $aluno['id_aluno'] ?></td>
+                    <td style="width: 30%;"><?= $aluno['nome'] ?></td>
+                    <td style="width: 20%;" class="text-center"><?= $data_nascimento ?></td>
+                    <td style="width: 15%;" class="text-end"><?= $salario ?></td>
+                </tr>
 
-                    <?php
+                <?php
                 }
                 $stmt = null;
                 $conn = null;

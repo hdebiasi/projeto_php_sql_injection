@@ -12,7 +12,12 @@ function conectarPDO()
         $conn = new PDO(DSN . ':host=' . SERVIDOR . ';dbname=' . BANCODEDADOS, USUARIO, SENHA);
         // echo '<h3>Conexão com PDO realizada com sucesso!</h3>';
         console_log('Conexão com PDO realizada com sucesso!');
+        
+        // Desabilita a emulação de 'prepared statements', sendo a opção mais segura contra 'sql injections'
+        $conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+
         verificarTabelaUsuario($conn);
+        
         return $conn;
     } catch (PDOException $e) {
         console_log('<h3>Erro: ' . $e->getMessage() . '</h3>');
@@ -57,7 +62,7 @@ function login($conn)
         $username = $_POST['usuario'];
         $senha = sha1($_POST['senha']);
 
-        $consulta = 'SELECT * FROM usuario WHERE username=:usuario AND senha=:senha';
+        $consulta = 'SELECT nome, username, senha FROM usuario WHERE username=:usuario AND senha=:senha';
         $stmt = $conn->prepare($consulta);
         $stmt->bindParam(':usuario', $username);
         $stmt->bindParam(':senha', $senha);
