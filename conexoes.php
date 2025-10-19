@@ -9,7 +9,7 @@ session_start();
 function conectarPDO()
 {
     try {
-        $conn = new PDO(DSN . ':host=' . SERVIDOR . ';port=' . PORTA, ';dbname=' . BANCODEDADOS, USUARIO, SENHA);
+        $conn = new PDO(DSN . ':host=' . SERVIDOR . ';port=' . PORTA . ';dbname=' . BANCODEDADOS, USUARIO, SENHA);
         // echo '<h3>Conexão com PDO realizada com sucesso!</h3>';
         console_log('Conexão com PDO realizada com sucesso!');
         verificarTabelaUsuario($conn);
