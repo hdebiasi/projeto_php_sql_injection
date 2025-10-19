@@ -1,8 +1,9 @@
 <?php
-/*require_once "conexoes.php";
+require_once "conexoes.php";
 require_once 'utils.php';
 
-$conn = conectarPDO();
+console_log('olá PHP');
+/*$conn = conectarPDO();
 
 if(isset($_POST['logar'])) {
     $mensagem = login($conn);
@@ -22,6 +23,9 @@ if(isset($_POST['logar'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;700&display=swap" >
 
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
@@ -62,6 +66,8 @@ if(isset($_POST['logar'])) {
         </form>
     </div>
     
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
     
     <script>
         $(document).ready(function() {
