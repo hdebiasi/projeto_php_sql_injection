@@ -20,7 +20,8 @@ function conectarPDO()
         // echo '<h3>Conexão com PDO realizada com sucesso!</h3>';
         //console_log('Conexão com PDO realizada com sucesso!');
         //verificarTabelaUsuario($conn);
-        return $conn;
+        //return $conn;
+        return null;
     } catch (PDOException $e) {
         console_log('<h3>Erro: ' . $e->getMessage() . '</h3>');
         exit();
