@@ -17,7 +17,7 @@ function conectarPDO()
         $URL = DSN . ':host=' . SERVIDOR . ';port=' . PORTA . ';dbname=' . BANCODEDADOS;
         console_log($URL);
 
-        $URL = 'mysql://root:ffYeAqwQfBMbXXgoemAGSBxlGArUUGAE@mysql.railway.internal:3306/railway';
+        $URL = 'mysql://mysql.railway.internal:3306/railway';
         $conn = new PDO($URL, 'root', 'ffYeAqwQfBMbXXgoemAGSBxlGArUUGAE');
         // echo '<h3>Conexão com PDO realizada com sucesso!</h3>';
         //console_log('Conexão com PDO realizada com sucesso!');
