@@ -9,10 +9,17 @@ session_start();
 function conectarPDO()
 {
     try {
-        $conn = new PDO(DSN . ':host=' . SERVIDOR . ';port=' . PORTA . ';dbname=' . BANCODEDADOS, USUARIO, SENHA);
+        console_log('Iniciando conexão...');
+        foreach ($_ENV as $k=>$v) {
+            console_log($k . " => " . $v);
+        }
+        console_log(getenv('MYSQLDATABASE'));
+        $URL = DSN . ':host=' . SERVIDOR . ';port=' . PORTA . ';dbname=' . BANCODEDADOS;
+        console_log($URL);
+        //$conn = new PDO($URL, USUARIO, SENHA);
         // echo '<h3>Conexão com PDO realizada com sucesso!</h3>';
-        console_log('Conexão com PDO realizada com sucesso!');
-        verificarTabelaUsuario($conn);
+        //console_log('Conexão com PDO realizada com sucesso!');
+        //verificarTabelaUsuario($conn);
         return $conn;
     } catch (PDOException $e) {
         console_log('<h3>Erro: ' . $e->getMessage() . '</h3>');
