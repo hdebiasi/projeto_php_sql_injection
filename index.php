@@ -1,3 +1,19 @@
+<?php
+/*require_once "conexoes.php";
+require_once 'utils.php';
+
+$conn = conectarPDO();
+
+if(isset($_POST['logar'])) {
+    $mensagem = login($conn);
+
+    echo '<div class="container"><div id="flash-msg" class="alert alert-danger fade show d-flex justify-content-center align-items-center">
+            <i class="bi-exclamation-octagon-fill"></i>
+            <span class="me-auto px-3"><strong class="mx-2">Erro! </strong>' . $mensagem . '</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div></div>';
+}*/
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -6,9 +22,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;700&display=swap" >
 
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
@@ -49,8 +62,6 @@
         </form>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     
     <script>
         $(document).ready(function() {
