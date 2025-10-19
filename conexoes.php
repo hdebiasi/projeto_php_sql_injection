@@ -13,6 +13,7 @@ function conectarPDO()
             console_log($k . " => " . $v);
         }
         console_log(getenv('MYSQLDATABASE'));
+        console_log(getenv('CONEXAO'));
         $URL = DSN . ':host=' . SERVIDOR . ';port=' . PORTA . ';dbname=' . BANCODEDADOS;
         console_log($URL);
         //$conn = new PDO($URL, USUARIO, SENHA);
