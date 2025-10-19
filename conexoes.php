@@ -10,7 +10,7 @@ function conectarPDO()
 {
     try {
         console_log('Iniciando conexão...');
-        foreach ($_ENV as $k=>$v) {
+        /*foreach ($_ENV as $k=>$v) {
             console_log($k . " => " . $v);
         }
         console_log(getenv('MYSQLDATABASE'));
@@ -20,7 +20,7 @@ function conectarPDO()
         // echo '<h3>Conexão com PDO realizada com sucesso!</h3>';
         //console_log('Conexão com PDO realizada com sucesso!');
         //verificarTabelaUsuario($conn);
-        //return $conn;
+        //return $conn;*/
         return null;
     } catch (PDOException $e) {
         console_log('<h3>Erro: ' . $e->getMessage() . '</h3>');
