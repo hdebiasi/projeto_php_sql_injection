@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 
 require_once 'dados_acesso.php';
 require_once 'utils.php';
@@ -13,7 +13,7 @@ function conectarPDO()
         foreach ($_ENV as $k=>$v) {
             console_log($k . " => " . $v);
         }
-        /*console_log(getenv('MYSQLDATABASE'));
+        console_log(getenv('MYSQLDATABASE'));
         $URL = DSN . ':host=' . SERVIDOR . ';port=' . PORTA . ';dbname=' . BANCODEDADOS;
         console_log($URL);
         //$conn = new PDO($URL, USUARIO, SENHA);
@@ -21,7 +21,7 @@ function conectarPDO()
         //console_log('Conexão com PDO realizada com sucesso!');
         //verificarTabelaUsuario($conn);
         //return $conn;
-        */
+        
         return null;
     } catch (PDOException $e) {
         console_log('<h3>Erro: ' . $e->getMessage() . '</h3>');
