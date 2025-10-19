@@ -4,7 +4,7 @@
 require_once 'dados_acesso.php';
 require_once 'utils.php';
 
-// mysqli_report(MYSQLI_REPORT_OFF);
+mysqli_report(MYSQLI_REPORT_OFF);
 
 function conectarPDO()
 {
@@ -13,14 +13,15 @@ function conectarPDO()
         foreach ($_ENV as $k=>$v) {
             console_log($k . " => " . $v);
         }
-        console_log(getenv('MYSQLDATABASE'));
+        /*console_log(getenv('MYSQLDATABASE'));
         $URL = DSN . ':host=' . SERVIDOR . ';port=' . PORTA . ';dbname=' . BANCODEDADOS;
         console_log($URL);
         //$conn = new PDO($URL, USUARIO, SENHA);
         // echo '<h3>Conexão com PDO realizada com sucesso!</h3>';
         //console_log('Conexão com PDO realizada com sucesso!');
         //verificarTabelaUsuario($conn);
-        //return $conn;*/
+        //return $conn;
+        */
         return null;
     } catch (PDOException $e) {
         console_log('<h3>Erro: ' . $e->getMessage() . '</h3>');

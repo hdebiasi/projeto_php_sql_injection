@@ -2,9 +2,9 @@
 require_once "conexoes.php";
 require_once 'utils.php';
 
-/*$conn = conectarPDO();
+$conn = conectarPDO();
 
-if(isset($_POST['logar'])) {
+/*if(isset($_POST['logar'])) {
     $mensagem = login($conn);
 
     echo '<div class="container"><div id="flash-msg" class="alert alert-danger fade show d-flex justify-content-center align-items-center">
