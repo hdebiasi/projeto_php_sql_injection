@@ -1,10 +1,10 @@
 <?php
-session_start();
+// session_start();
 
 require_once 'dados_acesso.php';
 require_once 'utils.php';
 
-mysqli_report(MYSQLI_REPORT_OFF);
+// mysqli_report(MYSQLI_REPORT_OFF);
 
 function conectarPDO()
 {

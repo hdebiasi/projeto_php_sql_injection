@@ -1,9 +1,8 @@
 <?php
-/*
 require_once "conexoes.php";
 require_once 'utils.php';
 
-$conn = conectarPDO();
+/*$conn = conectarPDO();
 
 if(isset($_POST['logar'])) {
     $mensagem = login($conn);
