@@ -4,12 +4,11 @@ session_start();
 require_once 'dados_acesso.php';
 require_once 'utils.php';
 
-// mysqli_report(MYSQLI_REPORT_OFF);
+mysqli_report(MYSQLI_REPORT_OFF);
 
 function conectarPDO()
 {
     try {
-        console_log('Iniciando conexão...');
         foreach ($_ENV as $k=>$v) {
             console_log($k . " => " . $v);
         }
