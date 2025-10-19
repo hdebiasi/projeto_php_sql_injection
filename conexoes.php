@@ -2,7 +2,7 @@
 require_once 'dados_acesso.php';
 require_once 'utils.php';
 
-// mysqli_report(MYSQLI_REPORT_OFF);
+mysqli_report(MYSQLI_REPORT_OFF);
 
 // session_start();
 
