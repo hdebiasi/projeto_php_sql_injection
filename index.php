@@ -1,8 +1,8 @@
 <?php
-require_once "conexoes.php";
+/*require_once "conexoes.php";
 require_once 'utils.php';
 
-/*console_log('olá PHP');
+console_log('olá PHP');
 $conn = conectarPDO();
 
 if(isset($_POST['logar'])) {
@@ -26,7 +26,7 @@ if(isset($_POST['logar'])) {
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;700&display=swap" > -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;700&display=swap" >
 
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <link rel="stylesheet" href="./style.css">
