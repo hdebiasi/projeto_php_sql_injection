@@ -10,7 +10,7 @@ function conectarPDO()
 {
     try {
         console_log('Iniciando conexão...');
-        /*foreach ($_ENV as $k=>$v) {
+        foreach ($_ENV as $k=>$v) {
             console_log($k . " => " . $v);
         }
         console_log(getenv('MYSQLDATABASE'));
