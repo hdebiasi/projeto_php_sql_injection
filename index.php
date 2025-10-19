@@ -2,7 +2,7 @@
 require_once "conexoes.php";
 require_once 'utils.php';
 
-$conn = conectarPDO();
+/*$conn = conectarPDO();
 
 if(isset($_POST['logar'])) {
     $mensagem = login($conn);
@@ -12,7 +12,7 @@ if(isset($_POST['logar'])) {
             <span class="me-auto px-3"><strong class="mx-2">Erro! </strong>' . $mensagem . '</span>
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div></div>';
-}
+}*/
 ?>
 
 <!DOCTYPE html>
